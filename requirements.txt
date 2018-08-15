@@ -1,3 +1,4 @@
 f90nml
+matplotlib
 netCDF4
 numpy
