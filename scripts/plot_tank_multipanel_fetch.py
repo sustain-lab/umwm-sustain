@@ -36,7 +36,7 @@ for col in range(2):
 
 ax1, ax2, ax3, ax4, ax5, ax6 = axes
 
-run_dict = {w: 'run' + '%2.2i' % wspd.index(w) for w in wspd}
+run_dict = {w: 'run' + '%2.2i' % (wspd.index(w) + 1) for w in wspd}
 colors_dict = {10: 'k', 20: 'b', 30: 'g', 40: 'y', 50: 'r', 60: 'm'}
 
 for w in range(10, 70, 10):
@@ -77,5 +77,5 @@ for ax in [ax3, ax6]:
     ax.set_xlabel('Fetch [m]')
 
 fig.suptitle('SUSTAIN wave simulations -- fetch limited')
-plt.savefig('sustain_multipanel.png', dpi=100)
+plt.savefig('sustain_multipanel_fetch.png', dpi=100)
 plt.close(fig)
